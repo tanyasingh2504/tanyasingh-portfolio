@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tanya Singh | Portfolio</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/4c5b8b6f4b.js" crossorigin="anonymous"></script>
 
@@ -26,7 +27,12 @@ body.light{
   --glass:rgba(0,0,0,0.04);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
 
 body{
   background:var(--bg);
@@ -35,7 +41,7 @@ body{
   overflow-x:hidden;
 }
 
-/* Purple Accent Separation Background */
+/* HEADER */
 header{
   background:linear-gradient(135deg,#5b21b6,#6366f1,#4f46e5);
   background-size:200% 200%;
@@ -83,7 +89,9 @@ nav a::after{
   transition:.3s;
 }
 
-nav a:hover::after{width:100%;}
+nav a:hover::after{
+  width:100%;
+}
 
 .toggle{
   position:fixed;
@@ -99,7 +107,9 @@ nav a:hover::after{width:100%;}
   transition:.3s;
 }
 
-.toggle:hover{transform:scale(1.05);} 
+.toggle:hover{
+  transform:scale(1.05);
+}
 
 /* HERO */
 header{
@@ -122,10 +132,21 @@ header img{
   box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
-header h1{font-size:3rem;font-weight:700;}
-.typing{margin-top:12px;font-size:1.1rem;color:var(--muted);height:28px;}
+header h1{
+  font-size:3rem;
+  font-weight:700;
+}
 
-.hero-buttons{margin-top:30px;}
+.typing{
+  margin-top:12px;
+  font-size:1.1rem;
+  color:var(--muted);
+  height:28px;
+}
+
+.hero-buttons{
+  margin-top:30px;
+}
 
 .btn{
   padding:14px 28px;
@@ -135,6 +156,8 @@ header h1{font-size:3rem;font-weight:700;}
   cursor:pointer;
   transition:.3s ease;
   margin:8px;
+  text-decoration:none;
+  display:inline-block;
 }
 
 .primary{
@@ -199,6 +222,15 @@ section{
   transform:translateY(-6px);
 }
 
+.inner-card h3{
+  margin-bottom:12px;
+}
+
+.inner-card p{
+  line-height:1.6;
+  color:var(--muted);
+}
+
 .skills span{
   display:inline-block;
   background:var(--accent);
@@ -207,6 +239,32 @@ section{
   margin:6px;
   font-size:.8rem;
   color:white;
+}
+
+/* EXPERIENCE */
+.experience-item{
+  background:var(--glass);
+  padding:30px;
+  border-radius:18px;
+}
+
+.experience-item h3{
+  margin-bottom:10px;
+}
+
+.experience-item p{
+  line-height:1.7;
+  color:var(--muted);
+}
+
+/* EDUCATION */
+.education{
+  text-align:center;
+}
+
+.education p{
+  margin:10px 0;
+  color:var(--muted);
 }
 
 /* CONTACT */
@@ -244,7 +302,11 @@ section{
   cursor:pointer;
 }
 
-.social-icons{text-align:center;margin-top:30px;}
+.social-icons{
+  text-align:center;
+  margin-top:30px;
+}
+
 .social-icons a{
   color:var(--text);
   font-size:1.6rem;
@@ -266,117 +328,435 @@ footer{
 }
 
 @media(max-width:768px){
-header h1{font-size:2.2rem;}
-section{padding:90px 8%;}
-.queue-card{padding:40px;}
+  header h1{
+    font-size:2.2rem;
+  }
+
+  section{
+    padding:90px 8%;
+  }
+
+  .queue-card{
+    padding:40px;
+  }
+
+  nav{
+    padding:12px 15px;
+    width:90%;
+    text-align:center;
+  }
+
+  nav a{
+    margin:0 7px;
+    font-size:.75rem;
+  }
+
+  .toggle{
+    top:80px;
+    right:20px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
 <a href="#about">About</a>
+<a href="#education">Education</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
 <a href="#internship">Internship</a>
 <a href="#contact">Contact</a>
 </nav>
 
 <button class="toggle" onclick="toggleTheme()">Toggle Theme</button>
 
+<!-- HERO -->
 <header>
+
 <img src="resumepicture.jpeg" alt="Tanya Singh">
+
 <h1>Tanya Singh</h1>
+
 <div class="typing" id="typing"></div>
+
 <div class="hero-buttons">
-<a href="TANYA SINGH (2).pdf" download><button class="btn primary">Download Resume</button></a>
-<a href="#contact"><button class="btn primary">Contact Me</button></a>
+
+<a href="TANYA SINGH (2).pdf" download>
+<button class="btn primary">Download Resume</button>
+</a>
+
+<a href="#contact">
+<button class="btn primary">Contact Me</button>
+</a>
+
 </div>
+
 </header>
 
+
+<!-- ABOUT -->
 <section id="about">
+
 <div class="queue-card">
+
 <h2 class="section-title">About Me</h2>
-<p>I am a Computer Science (Information Security) student at VIT Vellore with strong foundations in Data Structures, OOPS, and analytical problem-solving. Passionate about building scalable systems and continuously enhancing my technical expertise.</p>
+
+<p>
+I am a Computer Science (Information Security) student at VIT Vellore
+with strong foundations in Data Structures, OOPS, and analytical
+problem-solving. Passionate about building scalable systems and
+continuously enhancing my technical expertise.
+</p>
+
 </div>
+
 </section>
 
+
+<!-- EDUCATION -->
+<section id="education">
+
+<div class="queue-card">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education">
+
+<h3>VIT Vellore</h3>
+
+<p>
+B.Tech Computer Science and Engineering
+(Information Security)
+</p>
+
+<p>
+<strong>CGPA: 8.29</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
 <section id="skills">
+
 <div class="queue-card">
+
 <h2 class="section-title">Technical Skills</h2>
+
 <div class="skills">
-<span>C</span><span>C++</span><span>Java</span><span>Python</span><span>SQl</span>
-<span>HTML</span><span>JavaScript</span><span>DSA</span><span>OOPS</span>
+
+<span>C</span>
+<span>C++</span>
+<span>Java</span>
+<span>Python</span>
+<span>SQL</span>
+<span>HTML</span>
+<span>JavaScript</span>
+<span>React</span>
+<span>Node.js</span>
+<span>DSA</span>
+<span>OOPS</span>
+
 </div>
+
 </div>
+
 </section>
 
+
+<!-- PROJECTS -->
 <section id="projects">
+
 <div class="queue-card">
+
 <h2 class="section-title">Projects</h2>
+
 <div class="card-grid">
-<div class="inner-card"><h3>Fastest Route Finder</h3><p>BFS-based shortest path detection in graph networks with optimized traversal logic.</p></div>
-<div class="inner-card"><h3>College Recommendation Chatbot</h3><p>Python NLP chatbot that analyzes user preferences and suggests relevant colleges.
-<a href="https://web-project-two-bay.vercel.app/" target="_blank">
-    Live Website
-</a></p></div>
-<div class="inner-card"><h3>Automatic Toll Booth</h3><p>Arduino IR sensor-based toll automation integrating hardware and software.</p></div>
-<div class="inner-card"><h3>Array Pattern Analyzer</h3><p>DSA-focused array analysis tool built in C/C++ for performance evaluation.</p></div>
+
+<!-- DSA PROJECT -->
+<div class="inner-card">
+
+<h3>Fastest Route Finder</h3>
+
+<p>
+BFS-based shortest path detection in graph networks
+with optimized traversal logic.
+</p>
+
 </div>
+
+
+<!-- WEB PROGRAMMING PROJECT -->
+<div class="inner-card">
+
+<h3>Online Shopping Website</h3>
+
+<p>
+Web programming project where I developed an online
+shopping website using <strong>React</strong> for the
+frontend and <strong>Node.js</strong> for the backend.
+The website provides an interactive shopping experience
+with a modern web interface.
+</p>
+
+<a
+href="https://web-project-two-bay.vercel.app/"
+target="_blank"
+class="btn primary"
+>
+Live Website
+</a>
+
 </div>
+
+
+<!-- CHATBOT -->
+<div class="inner-card">
+
+<h3>College Recommendation Chatbot</h3>
+
+<p>
+Python NLP chatbot that analyzes user preferences
+and suggests relevant colleges.
+</p>
+
+</div>
+
+
+<!-- TOLL BOOTH -->
+<div class="inner-card">
+
+<h3>Automatic Toll Booth</h3>
+
+<p>
+Arduino IR sensor-based toll automation integrating
+hardware and software.
+</p>
+
+</div>
+
+
+<!-- ARRAY PROJECT -->
+<div class="inner-card">
+
+<h3>Array Pattern Analyzer</h3>
+
+<p>
+DSA-focused array analysis tool built in C/C++
+for performance evaluation.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+<div class="queue-card">
+
+<h2 class="section-title">Experience</h2>
+
+<div class="experience-item">
+
+<h3>Events Head – LHSC</h3>
+
+<p>
+As Events Head at LHSC, I help in the planning, management,
+and coordination of various events. I work with the team to
+organize activities, coordinate event requirements, and ensure
+the smooth execution of events.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTERNSHIP -->
 <section id="internship">
+
 <div class="queue-card">
+
 <h2 class="section-title">Virtual Internship</h2>
-<p>Deloitte – Data Analytics Virtual Experience. Completed simulation tasks in analytics and forensic technology.</p>
+
+<p>
+Deloitte – Data Analytics Virtual Experience.
+Completed simulation tasks in analytics and forensic technology.
+</p>
+
 <br>
-<a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_cd5kYnh8XbT6vrgd7_1767024741258_completion_certificate.pdf" target="_blank" class="btn primary">View Certificate</a>
+
+<a
+href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqm8XbT6vrgd7_1767024741258_completion_certificate.pdf"
+target="_blank"
+class="btn primary"
+>
+View Certificate
+</a>
+
 </div>
+
 </section>
 
+
+<!-- CONTACT -->
 <section id="contact">
+
 <div class="queue-card">
+
 <h2 class="section-title">Contact Me</h2>
-<form class="contact-form" action="https://formsubmit.co/tanusinghvizag@gmail.com" method="POST">
+
+<form
+class="contact-form"
+action="https://formsubmit.co/tanusinghvizag@gmail.com"
+method="POST"
+>
+
 <input type="hidden" name="_captcha" value="false">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required
+>
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required
+>
+
+<textarea
+name="message"
+rows="5"
+placeholder="Your Message"
+required>
+</textarea>
+
+<button type="submit">
+Send Message
+</button>
+
 </form>
+
+
 <div class="social-icons">
-<a href="#"><i class="fab fa-github"></i></a>
-<a href="#"><i class="fab fa-linkedin"></i></a>
-<a href="mailto:tanusinghvizag@gmail.com"><i class="fas fa-envelope"></i></a>
+
+<a href="#">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:tanusinghvizag@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
 </div>
+
 </div>
+
 </section>
 
-<footer>© 2026 Tanya Singh | Portfolio</footer>
+
+<!-- FOOTER -->
+<footer>
+© 2026 Tanya Singh | Portfolio
+</footer>
+
 
 <script>
+
 function toggleTheme(){
   document.body.classList.toggle('light');
 }
 
-const roles=["CSE Student","DSA Enthusiast","Aspiring Software Developer"];
-let i=0,j=0,current='',letter='';
+
+/* TYPING ANIMATION */
+
+const roles=[
+  "CSE Student",
+  "DSA Enthusiast",
+  "Aspiring Software Developer"
+];
+
+let i=0;
+let j=0;
+let current='';
+let letter='';
+
 (function type(){
-  if(i===roles.length)i=0;
+
+  if(i===roles.length)
+    i=0;
+
   current=roles[i];
+
   letter=current.slice(0,++j);
+
   document.getElementById('typing').textContent=letter;
-  if(letter.length===current.length){i++;j=0;setTimeout(type,1200);}else{setTimeout(type,80);}
+
+  if(letter.length===current.length){
+
+    i++;
+    j=0;
+
+    setTimeout(type,1200);
+
+  }else{
+
+    setTimeout(type,80);
+
+  }
+
 })();
 
+
+/* SCROLL ANIMATION */
+
 const cards=document.querySelectorAll('.queue-card');
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add('visible');}
-});},{threshold:.2});
+
+const observer=new IntersectionObserver(
+(entries)=>{
+
+  entries.forEach(entry=>{
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add('visible');
+
+    }
+
+  });
+
+},
+{
+  threshold:.2
+}
+);
+
 cards.forEach(card=>observer.observe(card));
+
 </script>
 
 </body>
